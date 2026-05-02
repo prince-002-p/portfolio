@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prince Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="asset/img.jpg" 
+     alt="Prince Kumar profile photo" 
+     class="profile-img" 
+     onclick="openImage(this)">
+    <h1>Prince Kumar</h1>
+    <p>BCA Student | Frontend Developer</p>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-container">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a BCA student and aspiring frontend developer with a strong interest in building clean and user-friendly web applications. I have experience working with HTML, CSS, and JavaScript, and I enjoy creating interactive projects that solve real-world problems.
+      </p>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects-container">
+
+        <div class="project-card">
+          <h3>Task Manager</h3>
+          <p>
+            Advanced task manager with add, edit, delete, and complete features along with localStorage support for data persistence.
+          </p>
+          
+          <div class="links">
+            <a href="https://prince-002-p.github.io/task-manager/" target="_blank" rel="noopener noreferrer">🔗 Live</a>
+            <a href="https://github.com/prince-002-p/task-manager" target="_blank" rel="noopener noreferrer">📂 Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Calculator</h3>
+          <p>
+            Web-based calculator supporting basic arithmetic operations with a clean and responsive user interface.
+          </p>
+          
+          <div class="links">
+            <a href="https://prince-002-p.github.io/calculator/" target="_blank" rel="noopener noreferrer">🔗 Live</a>
+            <a href="https://github.com/prince-002-p/calculator" target="_blank" rel="noopener noreferrer">📂 Code</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <h3>Technical Skills</h3>
+      <div class="skill-box">
+
+        <div class="skill">
+          <span>HTML</span>
+          <div class="bar"><div class="fill html"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>CSS</span>
+          <div class="bar"><div class="fill css"></div></div>
+        </div>
+
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="bar"><div class="fill js"></div></div>
+        </div>
+
+      </div>
+
+      <h3>Tools & Software</h3>
+      <div class="tools">
+        <span>📄 MS Word</span>
+        <span>📊 MS Excel</span>
+        <span>📽 PowerPoint</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+
+      <div class="contact-box">
+
+        <div class="contact-item">
+          <span>📧</span>
+          <a href="mailto:princekcem@email.com">princekcem@email.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span>💻</span>
+          <a href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+        </div>
+
+        <div class="contact-item">
+          <span>🔗</span>
+          <a href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+  <img id="modalImg">
+</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Prince Kumar</p>
+  </footer>
+
+  <script>
+function openImage(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeImage() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
