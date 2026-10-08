@@ -3,144 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prince Kumar | Portfolio</title>
+  <meta name="description" content="Prince Kumar — BCA student and aspiring web developer building practical web applications and software projects.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Prince Kumar | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <img src="asset/img.jpg" 
-     alt="Prince Kumar profile photo" 
-     class="profile-img" 
-     onclick="openImage(this)">
-    <h1>Prince Kumar</h1>
-    <p>BCA Student | Frontend Developer | Building Interactive Web Apps</p>
-  </header>
+  <nav class="navbar">
+    <a class="brand" href="#home" aria-label="Prince Kumar home"><span>&lt;/&gt;</span> Prince<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="main-container">
-
-    <!-- ABOUT -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am a BCA student and aspiring frontend developer with a strong interest in building clean and user-friendly web applications. I have experience working with HTML, CSS, and JavaScript, and I enjoy creating interactive projects that solve real-world problems.
-      </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="projects-container">
-
-        <div class="project-card">
-          <h3>Task Manager</h3>
-          <p>
-            Advanced task manager with add, edit, delete, and complete features along with localStorage support for data persistence.
-          </p>
-          
-          <div class="links">
-            <a href="https://prince-002-p.github.io/task-manager/" target="_blank" rel="noopener noreferrer">🔗 Live</a>
-            <a href="https://github.com/prince-002-p/task-manager" target="_blank" rel="noopener noreferrer">📂 Code</a>
-          </div>
+  <main>
+    <header class="hero" id="home">
+      <div class="hero-content">
+        <div class="availability"><span></span> Open to opportunities</div>
+        <p class="eyebrow">BCA Student · Web Developer</p>
+        <h1>Building <span>practical</span><br>digital experiences.</h1>
+        <p class="hero-copy">I'm Prince Kumar, a BCA student who enjoys turning ideas into clean, responsive and useful web applications.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects <span>↗</span></a>
+          <a class="btn secondary" href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-
-        <div class="project-card">
-          <h3>Calculator</h3>
-          <p>
-            Web-based calculator supporting basic arithmetic operations with a clean and responsive user interface.
-          </p>
-          
-          <div class="links">
-            <a href="https://prince-002-p.github.io/calculator/" target="_blank" rel="noopener noreferrer">🔗 Live</a>
-            <a href="https://github.com/prince-002-p/calculator" target="_blank" rel="noopener noreferrer">📂 Code</a>
-          </div>
-        </div>
-
+        <div class="hero-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Java</span><span>MySQL</span></div>
       </div>
-
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2>Skills</h2>
-
-      <h3>Technical Skills</h3>
-      <div class="skill-box">
-
-        <div class="skill">
-          <span>HTML</span>
-          <div class="bar"><div class="fill html"></div></div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="profile-wrap">
+          <div class="profile-ring"></div>
+          <img src="asset/img.jpg" alt="Prince Kumar profile photo" class="profile-img" onclick="openImage(this)">
         </div>
-
-        <div class="skill">
-          <span>CSS</span>
-          <div class="bar"><div class="fill css"></div></div>
-        </div>
-
-        <div class="skill">
-          <span>JavaScript</span>
-          <div class="bar"><div class="fill js"></div></div>
-        </div>
-
+        <div class="floating-card card-top"><span>⌘</span><div><b>Developer</b><small>Web · Software</small></div></div>
+        <div class="floating-card card-bottom"><span>✦</span><div><b>Projects</b><small>Built & shipped</small></div></div>
       </div>
+    </header>
 
-      <h3>Tools & Software</h3>
-      <div class="tools">
-        <span>📄 MS Word</span>
-        <span>📊 MS Excel</span>
-        <span>📽 PowerPoint</span>
+    <section class="section about-section" id="about">
+      <div class="section-label">01 · ABOUT</div>
+      <div class="about-grid">
+        <div><h2>Curious mind.<br><span>Practical builder.</span></h2></div>
+        <div class="about-copy">
+          <p>I am a BCA student focused on web development and software projects. I like learning by building — from responsive websites and productivity tools to finance applications and larger game-development experiments.</p>
+          <p>My approach is simple: understand the problem, build a useful solution, test it, and keep improving it.</p>
+          <div class="stats"><div><strong>5th</strong><span>Semester</span></div><div><strong>7.50</strong><span>CGPA</span></div><div><strong>10+</strong><span>Projects & Experiments</span></div></div>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-
-      <div class="contact-box">
-
-        <div class="contact-item">
-          <span>📧</span>
-          <a href="mailto:princekcem@email.com">princekcem@email.com</a>
-        </div>
-
-        <div class="contact-item">
-          <span>💻</span>
-          <a href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-        </div>
-
-        <div class="contact-item">
-          <span>🔗</span>
-          <a href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-        </div>
-
+    <section class="section" id="skills">
+      <div class="section-label">02 · SKILLS</div>
+      <div class="section-heading"><div><h2>Tools I <span>build with.</span></h2></div><p>Technologies and tools I use while learning, developing and shipping projects.</p></div>
+      <div class="skill-grid">
+        <div class="skill-card"><div class="skill-icon">01</div><h3>Frontend</h3><p>Creating responsive interfaces and interactive browser experiences.</p><div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div></div>
+        <div class="skill-card"><div class="skill-icon">02</div><h3>Programming</h3><p>Building logic, applications and experiments with general-purpose languages.</p><div class="tags"><span>Python</span><span>Java</span></div></div>
+        <div class="skill-card"><div class="skill-icon">03</div><h3>Data & Backend</h3><p>Working with relational databases and lightweight application backends.</p><div class="tags"><span>MySQL</span><span>SQLite</span><span>Flask</span></div></div>
+        <div class="skill-card"><div class="skill-icon">04</div><h3>Tools & Platforms</h3><p>Development, version control, website building and productivity tools.</p><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>WordPress</span><span>Wix Studio</span></div></div>
       </div>
     </section>
 
-  </div>
+    <section class="section projects-section" id="projects">
+      <div class="section-label">03 · SELECTED WORK</div>
+      <div class="section-heading"><div><h2>Things I've <span>built.</span></h2></div><p>A selection of practical projects — from web applications to larger development experiments.</p></div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-top"><span class="project-number">01</span><span class="status">Featured</span></div>
+          <div class="project-body"><p class="project-type">PERSONAL FINANCE · WEB APP</p><h3>FlowFund</h3><p>A personal finance and expense tracker with transaction management, budgets, analytics, CSV export, search, filters and persistent browser storage.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span></div><div class="project-links"><a href="https://prince-002-p.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/prince-002-p/expense-tracker" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">02</span><span class="status">In Development</span></div>
+          <div class="project-body"><p class="project-type">GAME DEVELOPMENT · GODOT</p><h3>Project Raasta</h3><p>An Android-first stylized action game experiment inspired by Indian and North Indian environments, currently developed as an offline prototype.</p><div class="tags"><span>Godot</span><span>GDScript</span><span>Android</span></div><div class="project-links"><a href="https://github.com/prince-002-p/project-raasta" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">03</span><span class="status">Live</span></div>
+          <div class="project-body"><p class="project-type">UTILITY · WEB APP</p><h3>Neon Snake</h3><p>A responsive browser game with difficulty levels, progressive gameplay, power-ups, themes, local scores and mobile controls.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/neon-snake/" target="_blank" rel="noopener noreferrer">Play ↗</a><a href="https://github.com/prince-002-p/neon-snake" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">04</span><span class="status">Live</span></div>
+          <div class="project-body"><p class="project-type">PRODUCTIVITY · WEB APP</p><h3>Task Manager</h3><p>A browser-based task manager with add, edit, delete and completion workflows backed by localStorage persistence.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/task-manager/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/prince-002-p/task-manager" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
+        </article>
+      </div>
+    </section>
 
-<div id="imageModal" class="image-modal" onclick="closeImage()">
-  <img id="modalImg">
-</div>
+    <section class="section experience-section" id="experience">
+      <div class="section-label">04 · EXPERIENCE</div>
+      <div class="experience-card">
+        <div class="experience-head"><div><p class="project-type">WEB DEVELOPMENT INTERNSHIP</p><h2>Robotlinks</h2></div><span>Jun 2026 — Jul 2026</span></div>
+        <p class="experience-role">Web Development Intern</p>
+        <p>Worked on web-development tasks and practical implementation during an internship, gaining hands-on exposure to development workflows and project delivery.</p>
+        <div class="tags"><span>Web Development</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Prince Kumar</p>
-  </footer>
+    <section class="section education-section">
+      <div class="section-label">05 · EDUCATION</div>
+      <div class="education-grid">
+        <div class="education-card"><span class="edu-year">CURRENT</span><h3>Bachelor of Computer Applications</h3><p>Krishna College of Education and Management</p><small>University of Lucknow · 5th Semester · CGPA 7.50</small></div>
+        <div class="education-card"><span class="edu-year">2024</span><h3>Class XII · CBSE</h3><p>Golden Flower Public Senior Secondary School</p><small>68%</small></div>
+      </div>
+    </section>
 
+    <section class="section contact-section" id="contact">
+      <div class="contact-box"><div><div class="section-label">06 · CONTACT</div><h2>Let's build something <span>useful.</span></h2><p>Have an internship opportunity, project idea, or just want to connect? I'd be happy to hear from you.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:princekcem@email.com">Email Me ↗</a><a class="contact-link" href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="contact-link" href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer><div><span class="brand">&lt;/&gt; Prince<span>.</span></span><p>Built with HTML, CSS & JavaScript.</p></div><p>© 2026 Prince Kumar</p></footer>
+
+  <div id="imageModal" class="image-modal" onclick="closeImage()" role="dialog" aria-label="Profile photo"><button class="modal-close" aria-label="Close image" onclick="event.stopPropagation(); closeImage()">×</button><img id="modalImg" alt="Prince Kumar profile photo"></div>
   <script>
-function openImage(img) {
-  document.getElementById("imageModal").style.display = "flex";
-  document.getElementById("modalImg").src = img.src;
-}
-
-function closeImage() {
-  document.getElementById("imageModal").style.display = "none";
-}
-</script>
-
+    const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
+    navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',open);});
+    document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+    function openImage(img){document.getElementById('imageModal').style.display='flex';document.getElementById('modalImg').src=img.src;}
+    function closeImage(){document.getElementById('imageModal').style.display='none';}
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImage();});
+  </script>
 </body>
 </html>
