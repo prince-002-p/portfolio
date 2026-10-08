@@ -108,30 +108,34 @@ body{background:#070a11}
   transform:none !important;
 }
 
+/* Developer — top right */
 .card-top{
   top:42px !important;
-  right:5% !important;
+  right:-20px !important;
   left:auto !important;
   bottom:auto !important;
 }
 
+/* Projects — bottom left */
 .card-bottom{
   bottom:55px !important;
-  left:5% !important;
+  left:-20px !important;
   right:auto !important;
   top:auto !important;
 }
 
+/* Python — top left */
 .card-left{
   top:42px !important;
-  left:5% !important;
+  left:-20px !important;
   right:auto !important;
   bottom:auto !important;
 }
 
+/* Game Development — bottom right */
 .card-right{
   bottom:55px !important;
-  right:5% !important;
+  right:-20px !important;
   left:auto !important;
   top:auto !important;
 }
