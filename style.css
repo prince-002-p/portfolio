@@ -119,6 +119,34 @@ body{background:#070a11}
   top:auto !important;
 }
 
+.card-left,
+.card-right{
+  position:absolute;
+  z-index:6;
+  animation:none !important;
+  transition:none !important;
+  transform:none !important;
+}
+
+.card-left{
+  top:50% !important;
+  left:-12px !important;
+  right:auto !important;
+  bottom:auto !important;
+}
+
+.card-right{
+  top:50% !important;
+  right:-12px !important;
+  left:auto !important;
+  bottom:auto !important;
+}
+
+@media(max-width:850px){
+  .card-left{left:-4px !important}
+  .card-right{right:-4px !important}
+}
+
 .profile-wrap::after{
   content:"";
   position:absolute;
