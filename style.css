@@ -129,22 +129,22 @@ body{background:#070a11}
 }
 
 .card-left{
-  top:18% !important;
-  left:8% !important;
+  top:15% !important;
+  left:calc(50% - 390px) !important;
   right:auto !important;
   bottom:auto !important;
 }
 
 .card-right{
-  top:18% !important;
-  right:8% !important;
+  top:15% !important;
+  right:calc(50% - 390px) !important;
   left:auto !important;
   bottom:auto !important;
 }
 
 @media(max-width:850px){
-  .card-left{top:10% !important;left:2% !important}
-  .card-right{top:10% !important;right:2% !important}
+  .card-left{top:8% !important;left:8px !important}
+  .card-right{top:8% !important;right:8px !important}
 }
 
 .profile-wrap::after{
