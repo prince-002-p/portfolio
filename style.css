@@ -172,3 +172,13 @@ body{background:#070a11}
 .current-grid > div b + span {
   margin-left: 8px !important;
 }
+
+
+/* Refined background for CURRENTLY section */
+.intro-strip{
+  background:linear-gradient(135deg,rgba(18,25,39,.92),rgba(11,16,27,.96)) !important;
+  border:1px solid rgba(124,242,192,.10);
+  border-radius:14px;
+  padding:22px 24px 32px !important;
+  box-shadow:0 18px 50px rgba(0,0,0,.22);
+}
