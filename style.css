@@ -204,3 +204,70 @@ body{background:#070a11}
   border-radius:0 !important;
   box-shadow:none !important;
 }
+
+
+/* Final PROJECT LAB overflow/layout fix */
+.projects-section,
+.project-heading,
+.project-heading > div,
+.project-heading > p,
+.project-grid,
+.project-card{
+  min-width:0;
+  max-width:100%;
+}
+
+.project-heading{
+  width:100%;
+}
+
+.project-heading > div{
+  flex:1 1 auto;
+}
+
+.project-heading > p{
+  flex:0 1 430px;
+  width:100%;
+  overflow-wrap:anywhere;
+}
+
+.project-grid{
+  width:100%;
+}
+
+.project-card{
+  overflow:hidden;
+}
+
+.project-filter{
+  display:flex !important;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.project-filter .filter{
+  appearance:none;
+  -webkit-appearance:none;
+  border:1px solid var(--line);
+  background:#0d121e;
+  color:#7d899d;
+  padding:8px 12px;
+  border-radius:7px;
+  font:10px "DM Mono",monospace;
+  cursor:pointer;
+}
+
+.project-filter .filter.active,
+.project-filter .filter:hover{
+  color:#07110c;
+  background:var(--accent);
+  border-color:var(--accent);
+}
+
+@media(max-width:850px){
+  .project-heading > p{
+    max-width:100%;
+    flex:none;
+  }
+}
