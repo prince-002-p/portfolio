@@ -118,3 +118,96 @@ body{background:
   animation:none !important;
   transition:none !important;
 }
+
+
+/* ===== PROFILE HERO: SOFT FLOATING CARDS ===== */
+
+.hero-visual{
+  position:relative !important;
+  display:block !important;
+  overflow:visible !important;
+}
+
+.profile-wrap{
+  position:absolute !important;
+  top:50% !important;
+  left:50% !important;
+  transform:translate(-50%,-50%) !important;
+  margin:0 !important;
+}
+
+.hero-visual > .orbit{
+  top:50% !important;
+  left:50% !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:translate(-50%,-50%) !important;
+  margin:0 !important;
+}
+
+/* Cards no longer revolve */
+.orbit-card{
+  top:auto !important;
+  left:auto !important;
+  right:auto !important;
+  bottom:auto !important;
+  animation:none !important;
+  transition:none !important;
+  transform:none !important;
+}
+
+/* Gentle floating motion */
+.card-top{
+  top:20% !important;
+  right:2% !important;
+  animation:softFloatTop 4.8s ease-in-out infinite !important;
+}
+
+.card-bottom{
+  bottom:18% !important;
+  left:2% !important;
+  animation:softFloatBottom 5.6s ease-in-out infinite !important;
+}
+
+@keyframes softFloatTop{
+  0%,100%{transform:translate(0,0)}
+  50%{transform:translate(-7px,9px)}
+}
+
+@keyframes softFloatBottom{
+  0%,100%{transform:translate(0,0)}
+  50%{transform:translate(8px,-8px)}
+}
+
+/* Small glowing points around the profile */
+.profile-wrap::after{
+  content:"";
+  position:absolute;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:
+    108px -82px 0 1px rgba(124,242,192,.65),
+    -116px -34px 0 0 rgba(139,167,255,.8),
+    118px 55px 0 -1px rgba(216,179,255,.75),
+    -96px 91px 0 -1px rgba(124,242,192,.6);
+  opacity:.75;
+  animation:pointFloat 5s ease-in-out infinite;
+  z-index:5;
+  pointer-events:none;
+}
+
+@keyframes pointFloat{
+  0%,100%{transform:translateY(0);opacity:.55}
+  50%{transform:translateY(-7px);opacity:1}
+}
+
+@media(max-width:850px){
+  .card-top{top:17% !important;right:0 !important}
+  .card-bottom{bottom:15% !important;left:0 !important}
+}
+
+@media(max-width:650px){
+  .orbit-card{display:none !important}
+}
