@@ -166,3 +166,9 @@ body{background:#070a11}
     gap: 6px;
   }
 }
+
+
+/* Definitive spacing fix for CURRENTLY text pairs */
+.current-grid > div b + span {
+  margin-left: 8px !important;
+}
