@@ -168,5 +168,13 @@ body{background:#070a11}
   .orbit-one{width:285px;height:285px}
   .orbit-two{width:340px;height:340px}
   .orbit-three{width:390px;height:390px}
-  .floating-card{display:none}
+  .floating-card{
+    display:flex !important;
+    padding:8px 9px;
+    gap:7px;
+    white-space:nowrap;
+  }
+  .floating-card b{font-size:10px}
+  .floating-card small{font-size:8px}
+  .floating-card>span{font-size:14px}
 }
