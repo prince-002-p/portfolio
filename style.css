@@ -129,22 +129,22 @@ body{background:#070a11}
 }
 
 .card-left{
-  top:50% !important;
-  left:-175px !important;
+  top:18% !important;
+  left:8% !important;
   right:auto !important;
   bottom:auto !important;
 }
 
 .card-right{
-  top:50% !important;
-  right:-175px !important;
+  top:18% !important;
+  right:8% !important;
   left:auto !important;
   bottom:auto !important;
 }
 
 @media(max-width:850px){
-  .card-left{left:-145px !important}
-  .card-right{right:-145px !important}
+  .card-left{top:10% !important;left:2% !important}
+  .card-right{top:10% !important;right:2% !important}
 }
 
 .profile-wrap::after{
