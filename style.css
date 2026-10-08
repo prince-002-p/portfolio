@@ -144,3 +144,25 @@ body{background:#070a11}
   .floating-card small{font-size:8px}
   .floating-card>span{font-size:14px}
 }
+
+
+/* Fix CURRENTLY section text spacing */
+.current-grid > div {
+  display: flex !important;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.current-grid > div b,
+.current-grid > div span {
+  display: inline !important;
+  margin-top: 0;
+}
+
+@media (max-width: 650px) {
+  .current-grid > div {
+    display: flex !important;
+    gap: 6px;
+  }
+}
