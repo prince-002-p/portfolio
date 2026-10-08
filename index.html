@@ -1,167 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Prince Kumar — BCA student and aspiring web developer building practical web applications and software projects.">
-  <meta name="theme-color" content="#0b1020">
-  <title>Prince Kumar | Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Prince Kumar — BCA student building practical web apps, automation tools and game-development experiments.">
+<meta name="theme-color" content="#080b14">
+<title>Prince Kumar | BCA Developer</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
 
-  <nav class="navbar">
-    <a class="brand" href="#home" aria-label="Prince Kumar home"><span>&lt;/&gt;</span> Prince<span>.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
+<nav class="navbar">
+  <a class="brand" href="#home"><span>&lt;/&gt;</span> Prince<span>.</span></a>
+  <div class="nav-status"><i></i> building in public</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+  </div>
+  <button class="cmd-hint" id="cmdOpen" aria-label="Open command menu">⌘ K</button>
+</nav>
+
+<main>
+<header class="hero" id="home">
+  <div class="hero-content">
+    <div class="availability"><span></span> BCA · 5th Semester · learning by building</div>
+    <p class="eyebrow">Student Developer / Builder</p>
+    <h1>I don't just <span>learn code.</span><br>I build with it.</h1>
+    <p class="hero-copy">I'm Prince Kumar — a BCA student exploring web development, Python automation and game development by turning small ideas into working projects.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#projects">Explore my builds <span>↓</span></a>
+      <a class="btn secondary" href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
     </div>
-  </nav>
+    <div class="hero-tech"><span>HTML/CSS/JS</span><span>Python</span><span>Java</span><span>SQL</span><span>Godot</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="code-window">
+      <div class="window-bar"><span></span><span></span><span></span><b>prince.py</b></div>
+      <pre><code><em>class</em> <strong>Developer</strong>:
+    role = <q>"BCA Student"</q>
+    focus = [
+      <q>"Web"</q>,
+      <q>"Automation"</q>,
+      <q>"Game Dev"</q>
+    ]
 
-  <main>
-    <header class="hero" id="home">
-      <div class="hero-content">
-        <div class="availability"><span></span> Open to opportunities</div>
-        <p class="eyebrow">BCA Student · Web Developer</p>
-        <h1>Building <span>practical</span><br>digital experiences.</h1>
-        <p class="hero-copy">I'm Prince Kumar, a BCA student who enjoys turning ideas into clean, responsive and useful web applications.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Projects <span>↗</span></a>
-          <a class="btn secondary" href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class="btn secondary" href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-        <div class="hero-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Java</span><span>MySQL</span></div>
-      </div>
-      <div class="hero-visual">
-        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="profile-wrap">
-          <div class="profile-ring"></div>
-          <img src="asset/img.jpg" alt="Prince Kumar profile photo" class="profile-img" onclick="openImage(this)">
-        </div>
-        <div class="floating-card card-top"><span>⌘</span><div><b>Developer</b><small>Web · Software</small></div></div>
-        <div class="floating-card card-bottom"><span>✦</span><div><b>Projects</b><small>Built & shipped</small></div></div>
-      </div>
-    </header>
+    <em>while</em> learning:
+      build()
+      test()
+      improve()</code></pre>
+      <div class="terminal-line"><span>➜</span> <b id="typedRole">building useful things</b><i></i></div>
+    </div>
+    <div class="floating-card card-top"><span>01</span><div><b>Current focus</b><small>Projects over tutorials</small></div></div>
+    <div class="floating-card card-bottom"><span>✦</span><div><b>Student → Builder</b><small>Learning in public</small></div></div>
+  </div>
+</header>
 
-    <section class="section about-section" id="about">
-      <div class="section-label">01 · ABOUT</div>
-      <div class="about-grid">
-        <div><h2>Curious mind.<br><span>Practical builder.</span></h2></div>
-        <div class="about-copy">
-          <p>I am a BCA student focused on web development and software projects. I like learning by building — from responsive websites and productivity tools to finance applications and larger game-development experiments.</p>
-          <p>My approach is simple: understand the problem, build a useful solution, test it, and keep improving it.</p>
-          <div class="stats"><div><strong>5th</strong><span>Semester</span></div><div><strong>7.50</strong><span>CGPA</span></div><div><strong>10+</strong><span>Projects & Experiments</span></div></div>
-        </div>
-      </div>
-    </section>
+<section class="section intro-strip">
+  <div class="mini-label">CURRENTLY</div>
+  <div class="current-grid">
+    <div><b>🎓 BCA</b><span>5th Semester</span></div>
+    <div><b>⚙ Building</b><span>DataMiner + Project Raasta</span></div>
+    <div><b>🧪 Learning</b><span>Backend, automation & better UI</span></div>
+    <div><b>📍 Based in</b><span>Lucknow, India</span></div>
+  </div>
+</section>
 
-    <section class="section" id="skills">
-      <div class="section-label">02 · SKILLS</div>
-      <div class="section-heading"><div><h2>Tools I <span>build with.</span></h2></div><p>Technologies and tools I use while learning, developing and shipping projects.</p></div>
-      <div class="skill-grid">
-        <div class="skill-card"><div class="skill-icon">01</div><h3>Frontend</h3><p>Creating responsive interfaces and interactive browser experiences.</p><div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div></div>
-        <div class="skill-card"><div class="skill-icon">02</div><h3>Programming</h3><p>Building logic, applications and experiments with general-purpose languages.</p><div class="tags"><span>Python</span><span>Java</span></div></div>
-        <div class="skill-card"><div class="skill-icon">03</div><h3>Data & Backend</h3><p>Working with relational databases and lightweight application backends.</p><div class="tags"><span>MySQL</span><span>SQLite</span><span>Flask</span></div></div>
-        <div class="skill-card"><div class="skill-icon">04</div><h3>Tools & Platforms</h3><p>Development, version control, website building and productivity tools.</p><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>WordPress</span><span>Wix Studio</span></div></div>
-      </div>
-    </section>
+<section class="section" id="about">
+  <div class="section-label">01 · WHO I AM</div>
+  <div class="about-grid">
+    <div><h2>Student by status.<br><span>Builder by habit.</span></h2></div>
+    <div class="about-copy">
+      <p>I'm a BCA student who learns fastest when there is something real to build. My projects range from responsive web apps and browser games to Python automation and an Android-first game prototype.</p>
+      <p>I am still learning, and that's part of the portfolio. Instead of presenting myself as an expert in everything, I show what I have actually built, what I am currently learning, and where I want to improve.</p>
+      <div class="stats"><div><strong>5th</strong><span>Semester</span></div><div><strong>7.50</strong><span>CGPA</span></div><div><strong>08+</strong><span>Featured Builds</span></div></div>
+    </div>
+  </div>
+</section>
 
-    <section class="section projects-section" id="projects">
-      <div class="section-label">03 · SELECTED WORK</div>
-      <div class="section-heading"><div><h2>Things I've <span>built.</span></h2></div><p>Real projects, experiments and client work across web development, productivity, finance and game development.</p></div>
-      <div class="project-grid">
-        <article class="project-card featured">
-          <div class="project-top"><span class="project-number">01</span><span class="status">Live · Featured</span></div>
-          <div class="project-body"><p class="project-type">PERSONAL FINANCE · WEB APP</p><h3>FlowFund</h3><p>A polished personal finance and expense tracker with transactions, budgets, analytics, CSV export, search, filters and persistent browser storage.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span></div><div class="project-links"><a href="https://prince-002-p.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/prince-002-p/expense-tracker" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
-        </article>
+<section class="section" id="skills">
+  <div class="section-label">02 · TOOLBOX</div>
+  <div class="section-heading"><div><h2>What I <span>work with.</span></h2></div><p>Not a percentage chart. A practical snapshot of the technologies I have used in actual projects.</p></div>
+  <div class="skill-grid">
+    <div class="skill-card"><div class="skill-icon">01</div><h3>Frontend</h3><p>Responsive interfaces, interactions and browser-based applications.</p><div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span></div></div>
+    <div class="skill-card"><div class="skill-icon">02</div><h3>Programming</h3><p>Application logic, scripting and problem-solving through project work.</p><div class="tags"><span>Python</span><span>Java</span><span>GDScript</span></div></div>
+    <div class="skill-card"><div class="skill-icon">03</div><h3>Backend & Data</h3><p>Small application backends, APIs and relational data storage.</p><div class="tags"><span>Flask</span><span>FastAPI</span><span>MySQL</span><span>SQLite</span></div></div>
+    <div class="skill-card"><div class="skill-icon">04</div><h3>Tools</h3><p>Tools that help me build, test, automate and ship projects.</p><div class="tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Selenium</span><span>Godot</span></div></div>
+  </div>
+</section>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">02</span><span class="status">In Development</span></div>
-          <div class="project-body"><p class="project-type">GAME DEVELOPMENT · ANDROID</p><h3>Project Raasta</h3><p>An Android-first stylized action game experiment inspired by Indian and North Indian environments. The current prototype focuses on movement, combat and mobile touch controls.</p><div class="tags"><span>Godot 4</span><span>GDScript</span><span>Android</span></div><div class="project-links"><span class="project-note">Private prototype · Active development</span></div></div>
-        </article>
+<section class="section projects-section" id="projects">
+  <div class="section-label">03 · PROJECT LAB</div>
+  <div class="section-heading project-heading"><div><h2>Things I've <span>actually built.</span></h2></div><p>Filter the lab by what kind of problem I was trying to solve.</p></div>
+  <div class="project-filter" role="tablist">
+    <button class="filter active" data-filter="all">All <small>08</small></button>
+    <button class="filter" data-filter="web">Web</button>
+    <button class="filter" data-filter="automation">Automation</button>
+    <button class="filter" data-filter="game">Game</button>
+    <button class="filter" data-filter="client">Client</button>
+  </div>
+  <div class="project-grid">
+    <article class="project-card featured" data-category="web" data-title="FlowFund" data-stack="HTML CSS JavaScript">
+      <div class="project-top"><span class="project-number">01 / FEATURED</span><span class="status live">Live</span></div>
+      <div class="project-body"><p class="project-type">PERSONAL FINANCE · WEB APP</p><h3>FlowFund</h3><p>Personal finance and expense tracker with transactions, budgets, analytics, CSV export, search, filters and persistent browser storage.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span></div><div class="project-links"><a href="https://prince-002-p.github.io/expense-tracker/" target="_blank">Live Demo ↗</a><a href="https://github.com/prince-002-p/expense-tracker" target="_blank">Source ↗</a></div></div>
+    </article>
+    <article class="project-card" data-category="game" data-title="Project Raasta" data-stack="Godot GDScript Android">
+      <div class="project-top"><span class="project-number">02</span><span class="status building">In development</span></div>
+      <div class="project-body"><p class="project-type">GAME DEV · ANDROID</p><h3>Project Raasta</h3><p>Android-first stylized action game experiment inspired by Indian environments. Prototype work includes movement, combat and mobile touch controls.</p><div class="tags"><span>Godot 4</span><span>GDScript</span><span>Android</span></div><div class="project-links"><span class="project-note">Private prototype · Active</span></div></div>
+    </article>
+    <article class="project-card" data-category="game web" data-title="Neon Snake" data-stack="HTML CSS JavaScript">
+      <div class="project-top"><span class="project-number">03</span><span class="status live">Live</span></div>
+      <div class="project-body"><p class="project-type">GAME · WEB</p><h3>Neon Snake</h3><p>Cyberpunk browser game with difficulty modes, obstacles, power-ups, themes, local scores and mobile controls.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/neon-snake/" target="_blank">Play ↗</a><a href="https://github.com/prince-002-p/neon-snake" target="_blank">Source ↗</a></div></div>
+    </article>
+    <article class="project-card" data-category="web" data-title="Task Manager" data-stack="HTML CSS JavaScript">
+      <div class="project-top"><span class="project-number">04</span><span class="status live">Live</span></div>
+      <div class="project-body"><p class="project-type">PRODUCTIVITY · WEB APP</p><h3>Task Manager</h3><p>Browser task manager with add, edit, delete and completion workflows backed by localStorage.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/task-manager/" target="_blank">Live Demo ↗</a><a href="https://github.com/prince-002-p/task-manager" target="_blank">Source ↗</a></div></div>
+    </article>
+    <article class="project-card" data-category="client web" data-title="SFC Financial" data-stack="WordPress UI">
+      <div class="project-top"><span class="project-number">05</span><span class="status client-status">Client work</span></div>
+      <div class="project-body"><p class="project-type">BUSINESS WEBSITE · CLIENT</p><h3>SFC Financial</h3><p>Business website project for Samriddhi Bazar Pvt. Ltd., focused on a professional digital presence and service presentation.</p><div class="tags"><span>Web Design</span><span>WordPress</span><span>UI</span></div><div class="project-links"><span class="project-note">Client project</span></div></div>
+    </article>
+    <article class="project-card featured-mini" data-category="automation" data-title="DataMiner" data-stack="Python Selenium FastAPI">
+      <div class="project-top"><span class="project-number">06 / SYSTEM</span><span class="status building">V1 frozen</span></div>
+      <div class="project-body"><p class="project-type">AUTOMATION · DATA COLLECTION</p><h3>DataMiner</h3><p>Full-stack data collection platform using Python, Selenium, FastAPI, SQLAlchemy, JWT auth, jobs, exports and a React frontend.</p><div class="tags"><span>Python</span><span>Selenium</span><span>FastAPI</span><span>React</span></div><div class="project-links"><a href="https://github.com/prince-002-p/DataMiner" target="_blank">GitHub ↗</a><span class="project-note">V2 planned</span></div></div>
+    </article>
+    <article class="project-card" data-category="web" data-title="Calculator" data-stack="HTML CSS JavaScript">
+      <div class="project-top"><span class="project-number">07</span><span class="status live">Live</span></div>
+      <div class="project-body"><p class="project-type">UTILITY · WEB APP</p><h3>Calculator</h3><p>Clean responsive calculator built as a focused frontend project.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/calculator/" target="_blank">Live Demo ↗</a><a href="https://github.com/prince-002-p/calculator" target="_blank">Source ↗</a></div></div>
+    </article>
+    <article class="project-card" data-category="automation" data-title="SchoolMiner" data-stack="Python Selenium">
+      <div class="project-top"><span class="project-number">08</span><span class="status">Experiment</span></div>
+      <div class="project-body"><p class="project-type">AUTOMATION · WEB SCRAPING</p><h3>SchoolMiner</h3><p>Selenium-based scraping experiment for collecting CBSE school information and processing results by state and district.</p><div class="tags"><span>Python</span><span>Selenium</span><span>Web Scraping</span></div><div class="project-links"><span class="project-note">Learning project</span></div></div>
+    </article>
+  </div>
+  <div class="lab-note"><span>⌁</span> More experiments will appear here as I build them.</div>
+</section>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">03</span><span class="status">Live</span></div>
-          <div class="project-body"><p class="project-type">GAME · WEB APP</p><h3>Neon Snake</h3><p>A cyberpunk browser game with difficulty modes, progressive gameplay, obstacles, power-ups, themes, local scores and mobile controls.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span></div><div class="project-links"><a href="https://prince-002-p.github.io/neon-snake/" target="_blank" rel="noopener noreferrer">Play ↗</a><a href="https://github.com/prince-002-p/neon-snake" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
-        </article>
+<section class="section journey-section" id="journey">
+  <div class="section-label">04 · BUILD JOURNEY</div>
+  <div class="section-heading"><div><h2>Learning by <span>shipping.</span></h2></div><p>A small timeline of how my learning turns into projects.</p></div>
+  <div class="timeline">
+    <div class="timeline-item"><span>01</span><div><b>Foundation</b><p>Started with HTML, CSS, JavaScript and core programming concepts.</p></div></div>
+    <div class="timeline-item"><span>02</span><div><b>Practical projects</b><p>Built calculators, task tools, games and small web applications instead of stopping at tutorials.</p></div></div>
+    <div class="timeline-item"><span>03</span><div><b>Automation</b><p>Moved into Python, Selenium, scraping, databases and reusable automation workflows.</p></div></div>
+    <div class="timeline-item active"><span>04</span><div><b>Now → bigger systems</b><p>Building DataMiner and experimenting with Android game development through Project Raasta.</p></div></div>
+  </div>
+</section>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">04</span><span class="status">Live</span></div>
-          <div class="project-body"><p class="project-type">PRODUCTIVITY · WEB APP</p><h3>Task Manager</h3><p>A browser-based task manager with add, edit, delete and completion workflows, using localStorage for persistent task data.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/task-manager/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/prince-002-p/task-manager" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
-        </article>
+<section class="section experience-section">
+  <div class="section-label">05 · EXPERIENCE</div>
+  <div class="experience-card"><div class="experience-head"><div><p class="project-type">WEB DEVELOPMENT INTERNSHIP</p><h2>Robotlinks</h2></div><span>Jun 2026 — Jul 2026</span></div><p class="experience-role">Web Development Intern</p><p>Hands-on exposure to practical web-development tasks, implementation workflows and project delivery.</p><div class="tags"><span>Web Development</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+</section>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">05</span><span class="status">Client Work</span></div>
-          <div class="project-body"><p class="project-type">BUSINESS WEBSITE · CLIENT PROJECT</p><h3>SFC Financial</h3><p>A business website project for Samriddhi Bazar Pvt. Ltd., focused on presenting the organisation and its services through a professional web presence.</p><div class="tags"><span>Web Design</span><span>WordPress</span><span>UI</span></div><div class="project-links"><span class="project-note">Client project</span></div></div>
-        </article>
+<section class="section education-section">
+  <div class="section-label">06 · EDUCATION</div>
+  <div class="education-grid"><div class="education-card"><span class="edu-year">CURRENT</span><h3>Bachelor of Computer Applications</h3><p>Krishna College of Education and Management</p><small>University of Lucknow · 5th Semester · CGPA 7.50</small></div><div class="education-card"><span class="edu-year">2024</span><h3>Class XII · CBSE</h3><p>Golden Flower Public Senior Secondary School</p><small>68%</small></div></div>
+</section>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">06</span><span class="status">Developer Tool</span></div>
-          <div class="project-body"><p class="project-type">AUTOMATION · DATA COLLECTION</p><h3>DataMiner</h3><p>A data-collection and automation project built around extracting structured information from websites and turning repetitive research into a reusable workflow.</p><div class="tags"><span>Python</span><span>Selenium</span><span>Automation</span></div><div class="project-links"><span class="project-note">Development project</span></div></div>
-        </article>
+<section class="section certifications-section">
+  <div class="section-label">07 · LEARNING LOG</div>
+  <div class="cert-grid">
+    <div class="cert-card"><small>WEB DEVELOPMENT</small><h3>Web Development in Java</h3><p>BLA / Barrownz</p></div>
+    <div class="cert-card"><small>DIGITAL MARKETING</small><h3>Digital Marketing with AI</h3><p>LearnTrail</p></div>
+    <div class="cert-card"><small>DATA & BI</small><h3>Data to Dashboard — Power BI</h3><p>3-hour live workshop</p></div>
+    <div class="cert-card"><small>SKILLS</small><h3>Skill-Up Certification</h3><p>Professional skills development</p></div>
+    <div class="cert-card"><small>EMPLOYABILITY</small><h3>Mahindra Employment Skills Programme</h3><p>Skills development programme</p></div>
+  </div>
+</section>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">07</span><span class="status">Live</span></div>
-          <div class="project-body"><p class="project-type">UTILITY · WEB APP</p><h3>Calculator</h3><p>A clean responsive calculator for everyday arithmetic, built as a focused frontend project.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><a href="https://prince-002-p.github.io/calculator/" target="_blank" rel="noopener noreferrer">Live Demo ↗</a><a href="https://github.com/prince-002-p/calculator" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div>
-        </article>
+<section class="section contact-section" id="contact">
+  <div class="contact-box"><div><div class="section-label">08 · SAY HELLO</div><h2>Have an idea?<br><span>Let's build it.</span></h2><p>Internship opportunity, project collaboration or just a developer-to-developer conversation — feel free to connect.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:princekcem@email.com">Email Me ↗</a><a class="contact-link" href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank">LinkedIn ↗</a><a class="contact-link" href="https://github.com/prince-002-p" target="_blank">GitHub ↗</a></div></div>
+</section>
+</main>
 
-        <article class="project-card">
-          <div class="project-top"><span class="project-number">08</span><span class="status">Learning Project</span></div>
-          <div class="project-body"><p class="project-type">WEB DEVELOPMENT · PRACTICE</p><h3>SchoolMiner</h3><p>A Selenium-based scraping experiment for collecting CBSE school information and processing results by state and district.</p><div class="tags"><span>Python</span><span>Selenium</span><span>Web Scraping</span></div><div class="project-links"><span class="project-note">Automation experiment</span></div></div>
-        </article>
-      </div>
-    </section>
+<footer><div><span class="brand">&lt;/&gt; Prince<span>.</span></span><p>Built by a BCA student, with HTML, CSS & JavaScript.</p></div><p>© 2026 · keep building.</p></footer>
 
-    <section class="section experience-section" id="experience">
-      <div class="section-label">04 · EXPERIENCE</div>
-      <div class="experience-card">
-        <div class="experience-head"><div><p class="project-type">WEB DEVELOPMENT INTERNSHIP</p><h2>Robotlinks</h2></div><span>Jun 2026 — Jul 2026</span></div>
-        <p class="experience-role">Web Development Intern</p>
-        <p>Worked on web-development tasks and practical implementation during an internship, gaining hands-on exposure to development workflows and project delivery.</p>
-        <div class="tags"><span>Web Development</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-      </div>
-    </section>
-
-    <section class="section education-section">
-      <div class="section-label">05 · EDUCATION</div>
-      <div class="education-grid">
-        <div class="education-card"><span class="edu-year">CURRENT</span><h3>Bachelor of Computer Applications</h3><p>Krishna College of Education and Management</p><small>University of Lucknow · 5th Semester · CGPA 7.50</small></div>
-        <div class="education-card"><span class="edu-year">2024</span><h3>Class XII · CBSE</h3><p>Golden Flower Public Senior Secondary School</p><small>68%</small></div>
-      </div>
-    </section>
-
-    <section class="section certifications-section">
-      <div class="section-label">06 · CERTIFICATIONS</div>
-      <div class="section-heading"><div><h2>Learning beyond <span>the classroom.</span></h2></div><p>Selected workshops and certifications that complement my academic and project-based learning.</p></div>
-      <div class="cert-grid">
-        <div class="cert-card"><small>WEB DEVELOPMENT</small><h3>Web Development in Java</h3><p>BLA / Barrownz</p></div>
-        <div class="cert-card"><small>DIGITAL MARKETING</small><h3>Digital Marketing with AI</h3><p>LearnTrail</p></div>
-        <div class="cert-card"><small>DATA & BI</small><h3>Data to Dashboard — Power BI</h3><p>3-hour live workshop</p></div>
-        <div class="cert-card"><small>SKILLS</small><h3>Skill-Up Certification</h3><p>Professional skills development</p></div>
-        <div class="cert-card"><small>EMPLOYABILITY</small><h3>Mahindra Employment Skills Programme</h3><p>Skills development programme</p></div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="contact-box"><div><div class="section-label">07 · CONTACT</div><h2>Let's build something <span>useful.</span></h2><p>Have an internship opportunity, project idea, or just want to connect? I'd be happy to hear from you.</p></div><div class="contact-actions"><a class="btn primary" href="mailto:princekcem@email.com">Email Me ↗</a><a class="contact-link" href="https://www.linkedin.com/in/prince-kumar-002-p" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="contact-link" href="https://github.com/prince-002-p" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
-    </section>
-  </main>
-
-  <footer><div><span class="brand">&lt;/&gt; Prince<span>.</span></span><p>Built with HTML, CSS & JavaScript.</p></div><p>© 2026 Prince Kumar</p></footer>
-
-  <div id="imageModal" class="image-modal" onclick="closeImage()" role="dialog" aria-label="Profile photo"><button class="modal-close" aria-label="Close image" onclick="event.stopPropagation(); closeImage()">×</button><img id="modalImg" alt="Prince Kumar profile photo"></div>
-  <script>
-    const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
-    navToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');navToggle.setAttribute('aria-expanded',open);});
-    document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
-    function openImage(img){document.getElementById('imageModal').style.display='flex';document.getElementById('modalImg').src=img.src;}
-    function closeImage(){document.getElementById('imageModal').style.display='none';}
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeImage();});
-  </script>
+<div class="command-overlay" id="commandOverlay"><div class="command-box"><div class="command-head"><b>Quick navigation</b><button id="cmdClose">Esc</button></div><input id="cmdInput" placeholder="Type a section..." autocomplete="off"><div class="command-items"><button data-go="#home">⌂ Home <kbd>H</kbd></button><button data-go="#projects">▣ Projects <kbd>P</kbd></button><button data-go="#skills">◇ Skills <kbd>S</kbd></button><button data-go="#journey">↗ Journey <kbd>J</kbd></button><button data-go="#contact">✉ Contact <kbd>C</kbd></button></div></div></div>
+<script src="script.js"></script>
 </body>
 </html>
