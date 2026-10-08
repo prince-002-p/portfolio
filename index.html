@@ -208,13 +208,16 @@ overflow:hidden !important;
 
 <section class="section projects-section project-section-fix" id="projects">
   <div class="section-label">03 · PROJECT LAB</div>
-  <div class="section-heading project-heading"><div><h2>Things I've <span>actually built.</span></h2></div><p>Filter the lab by what kind of problem I was trying to solve.</p></div>
-  <div class="project-filter" role="tablist">
-    <button class="filter active" data-filter="all">All <small>08</small></button>
-    <button class="filter" data-filter="web">Web</button>
-    <button class="filter" data-filter="automation">Automation</button>
-    <button class="filter" data-filter="game">Game</button>
-    <button class="filter" data-filter="client">Client</button>
+  <div class="section-heading project-heading" style="display:block;width:100%;max-width:100%;min-width:0;">
+    <div style="width:100%;min-width:0;"><h2>Things I've <span>actually built.</span></h2></div>
+    <p style="display:block;width:100%;max-width:600px;margin:14px 0 0;overflow-wrap:anywhere;">Filter the lab by what kind of problem I was trying to solve.</p>
+  </div>
+  <div class="project-filter" role="tablist" style="display:flex;flex-wrap:wrap;gap:7px;width:100%;max-width:100%;margin:25px 0;">
+    <button type="button" class="filter active" data-filter="all" style="appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0;padding:8px 12px;border:1px solid #273247;border-radius:7px;background:#0d121e;color:#7d899d;font:10px 'DM Mono',monospace;line-height:1.2;cursor:pointer;">All <small>08</small></button>
+    <button type="button" class="filter" data-filter="web" style="appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0;padding:8px 12px;border:1px solid #273247;border-radius:7px;background:#0d121e;color:#7d899d;font:10px 'DM Mono',monospace;line-height:1.2;cursor:pointer;">Web</button>
+    <button type="button" class="filter" data-filter="automation" style="appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0;padding:8px 12px;border:1px solid #273247;border-radius:7px;background:#0d121e;color:#7d899d;font:10px 'DM Mono',monospace;line-height:1.2;cursor:pointer;">Automation</button>
+    <button type="button" class="filter" data-filter="game" style="appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0;padding:8px 12px;border:1px solid #273247;border-radius:7px;background:#0d121e;color:#7d899d;font:10px 'DM Mono',monospace;line-height:1.2;cursor:pointer;">Game</button>
+    <button type="button" class="filter" data-filter="client" style="appearance:none;-webkit-appearance:none;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;margin:0;padding:8px 12px;border:1px solid #273247;border-radius:7px;background:#0d121e;color:#7d899d;font:10px 'DM Mono',monospace;line-height:1.2;cursor:pointer;">Client</button>
   </div>
   <div class="project-grid">
     <article class="project-card featured" data-category="web" data-title="FlowFund" data-stack="HTML CSS JavaScript">
