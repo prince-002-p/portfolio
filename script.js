@@ -32,7 +32,9 @@ document.querySelectorAll(".section,.project-card,.skill-card,.timeline-item").f
     document.querySelector(".card-bottom")
   ].filter(Boolean);
 
-  if (!visual || cards.length < 2) return;
+  const photo = visual?.querySelector(".profile-img");
+
+  if (!visual || !photo || cards.length < 2) return;
 
   let angle = 0;
   let lastTime = performance.now();
@@ -41,60 +43,47 @@ document.querySelectorAll(".section,.project-card,.skill-card,.timeline-item").f
     const delta = Math.min(currentTime - lastTime, 50);
     lastTime = currentTime;
 
-    // Rotation speed
+    // Smooth rotation speed
     angle += delta * 0.00045;
 
     const visualRect = visual.getBoundingClientRect();
-
-    /*
-      Find the profile image exactly.
-      This makes the orbit center independent
-      of the hero container size.
-    */
-    const photo =
-      visual.querySelector(".profile-photo") ||
-      visual.querySelector("img");
-
-    if (!photo) {
-      requestAnimationFrame(animateOrbit);
-      return;
-    }
-
     const photoRect = photo.getBoundingClientRect();
 
-    // Exact center of profile photo
-    const centerX =
-      photoRect.left -
-      visualRect.left +
-      photoRect.width / 2;
+    // Exact profile-photo center relative to the hero visual
+    const photoCenterX =
+      photoRect.left - visualRect.left + photoRect.width / 2;
 
-    const centerY =
-      photoRect.top -
-      visualRect.top +
-      photoRect.height / 2;
+    const photoCenterY =
+      photoRect.top - visualRect.top + photoRect.height / 2;
 
-    // Distance from photo center
+    // CSS left:50% / top:50% is the visual's center.
+    // Convert the photo center into an offset from that anchor.
+    const anchorOffsetX =
+      photoCenterX - visualRect.width / 2;
+
+    const anchorOffsetY =
+      photoCenterY - visualRect.height / 2;
+
+    // Same radius on X and Y = true circle.
+    // Keep the cards just outside the profile rings.
     const radius = Math.min(
       photoRect.width / 2 + 135,
       225
     );
 
     cards.forEach((card, index) => {
-
-      // Keep cards opposite each other
-      const a =
+      // Keep cards 180° apart.
+      const orbitAngle =
         angle + (index === 0 ? 0 : Math.PI);
 
-      // TRUE CIRCLE:
-      // same radius on X and Y
-      const x = Math.cos(a) * radius;
-      const y = Math.sin(a) * radius;
+      const x = Math.cos(orbitAngle) * radius;
+      const y = Math.sin(orbitAngle) * radius;
 
       card.style.setProperty(
         "transform",
         `translate(
-          calc(-50% + ${centerX + x}px),
-          calc(-50% + ${centerY + y}px)
+          calc(-50% + ${anchorOffsetX + x}px),
+          calc(-50% + ${anchorOffsetY + y}px)
         )`,
         "important"
       );
