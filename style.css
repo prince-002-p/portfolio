@@ -84,3 +84,37 @@ body{background:
   .card-top,.card-bottom{top:50%;left:50%;right:auto;bottom:auto}
   .card-top,.card-bottom{padding:9px 10px}
 }
+
+
+/* ===== EXACT PROFILE-CENTERED ORBIT ===== */
+.hero-visual{
+  position:relative !important;
+  display:block !important;
+  overflow:visible !important;
+}
+
+.profile-wrap{
+  position:absolute !important;
+  top:50% !important;
+  left:50% !important;
+  transform:translate(-50%,-50%) !important;
+  margin:0 !important;
+}
+
+.hero-visual > .orbit{
+  top:50% !important;
+  left:50% !important;
+  right:auto !important;
+  bottom:auto !important;
+  transform:translate(-50%,-50%) !important;
+  margin:0 !important;
+}
+
+.orbit-card{
+  top:50% !important;
+  left:50% !important;
+  right:auto !important;
+  bottom:auto !important;
+  animation:none !important;
+  transition:none !important;
+}
