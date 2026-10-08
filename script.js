@@ -22,69 +22,41 @@ document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLower
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("revealed")}),{threshold:.12});
 document.querySelectorAll(".section,.project-card,.skill-card,.timeline-item").forEach(x=>{x.classList.add("reveal");observer.observe(x)});
 
-/* ===== PERFECT CIRCULAR PROFILE ORBIT ===== */
+/* ===== EXACT CIRCULAR PROFILE ORBIT ===== */
 
 (function () {
   const visual = document.querySelector(".hero-visual");
-
   const cards = [
     document.querySelector(".card-top"),
     document.querySelector(".card-bottom")
   ].filter(Boolean);
 
-  const photo = visual?.querySelector(".profile-img");
-
-  if (!visual || !photo || cards.length < 2) return;
+  if (!visual || cards.length < 2) return;
 
   let angle = 0;
   let lastTime = performance.now();
 
-  function animateOrbit(currentTime) {
-    const delta = Math.min(currentTime - lastTime, 50);
-    lastTime = currentTime;
+  function animateOrbit(now) {
+    const delta = Math.min(now - lastTime, 50);
+    lastTime = now;
 
-    // Smooth rotation speed
-    angle += delta * 0.00045;
+    // Slow, smooth rotation.
+    angle += delta * 0.00038;
 
-    const visualRect = visual.getBoundingClientRect();
-    const photoRect = photo.getBoundingClientRect();
-
-    // Exact profile-photo center relative to the hero visual
-    const photoCenterX =
-      photoRect.left - visualRect.left + photoRect.width / 2;
-
-    const photoCenterY =
-      photoRect.top - visualRect.top + photoRect.height / 2;
-
-    // CSS left:50% / top:50% is the visual's center.
-    // Convert the photo center into an offset from that anchor.
-    const anchorOffsetX =
-      photoCenterX - visualRect.width / 2;
-
-    const anchorOffsetY =
-      photoCenterY - visualRect.height / 2;
-
-    // Same radius on X and Y = true circle.
-    // Keep the cards just outside the profile rings.
-    const radius = Math.min(
-      photoRect.width / 2 + 135,
-      225
-    );
+    // The profile and orbit rings are now EXACTLY centered
+    // at 50% / 50% of .hero-visual.
+    // Smaller radius keeps cards close to the photo.
+    const radius = window.innerWidth <= 650 ? 165 : 190;
 
     cards.forEach((card, index) => {
-      // Keep cards 180° apart.
-      const orbitAngle =
-        angle + (index === 0 ? 0 : Math.PI);
+      const orbitAngle = angle + (index === 0 ? 0 : Math.PI);
 
       const x = Math.cos(orbitAngle) * radius;
       const y = Math.sin(orbitAngle) * radius;
 
       card.style.setProperty(
         "transform",
-        `translate(
-          calc(-50% + ${anchorOffsetX + x}px),
-          calc(-50% + ${anchorOffsetY + y}px)
-        )`,
+        `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
         "important"
       );
     });
