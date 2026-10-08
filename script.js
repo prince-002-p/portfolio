@@ -22,7 +22,7 @@ document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLower
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("revealed")}),{threshold:.12});
 document.querySelectorAll(".section,.project-card,.skill-card,.timeline-item").forEach(x=>{x.classList.add("reveal");observer.observe(x)});
 
-/* ===== PROFILE CARD ORBIT ===== */
+/* ===== PERFECT CIRCULAR PROFILE ORBIT ===== */
 
 (function () {
   const visual = document.querySelector(".hero-visual");
@@ -41,26 +41,61 @@ document.querySelectorAll(".section,.project-card,.skill-card,.timeline-item").f
     const delta = Math.min(currentTime - lastTime, 50);
     lastTime = currentTime;
 
-    // Orbit speed
+    // Rotation speed
     angle += delta * 0.00045;
 
-    // Distance from profile photo
+    const visualRect = visual.getBoundingClientRect();
+
+    /*
+      Find the profile image exactly.
+      This makes the orbit center independent
+      of the hero container size.
+    */
+    const photo =
+      visual.querySelector(".profile-photo") ||
+      visual.querySelector("img");
+
+    if (!photo) {
+      requestAnimationFrame(animateOrbit);
+      return;
+    }
+
+    const photoRect = photo.getBoundingClientRect();
+
+    // Exact center of profile photo
+    const centerX =
+      photoRect.left -
+      visualRect.left +
+      photoRect.width / 2;
+
+    const centerY =
+      photoRect.top -
+      visualRect.top +
+      photoRect.height / 2;
+
+    // Distance from photo center
     const radius = Math.min(
-      210,
-      Math.max(160, visual.clientWidth * 0.28)
+      photoRect.width / 2 + 135,
+      225
     );
 
     cards.forEach((card, index) => {
-      // Keep the two cards opposite each other
-      const orbitAngle =
+
+      // Keep cards opposite each other
+      const a =
         angle + (index === 0 ? 0 : Math.PI);
 
-      const x = Math.cos(orbitAngle) * radius;
-      const y = Math.sin(orbitAngle) * radius;
+      // TRUE CIRCLE:
+      // same radius on X and Y
+      const x = Math.cos(a) * radius;
+      const y = Math.sin(a) * radius;
 
       card.style.setProperty(
         "transform",
-        `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
+        `translate(
+          calc(-50% + ${centerX + x}px),
+          calc(-50% + ${centerY + y}px)
+        )`,
         "important"
       );
     });
