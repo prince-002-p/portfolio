@@ -211,3 +211,34 @@ body{background:
 @media(max-width:650px){
   .orbit-card{display:none !important}
 }
+
+
+/* ===== FINAL STATIC PROFILE HERO ===== */
+
+/* Decorative rings stay fixed */
+.hero-visual > .orbit{
+  animation:none !important;
+  transform:translate(-50%,-50%) !important;
+}
+
+/* Profile cards stay fixed — no orbit, no floating */
+.orbit-card{
+  animation:none !important;
+  transform:none !important;
+}
+
+/* Fixed positions around the profile */
+.card-top{
+  top:20% !important;
+  right:2% !important;
+}
+
+.card-bottom{
+  bottom:18% !important;
+  left:2% !important;
+}
+
+@media(max-width:850px){
+  .card-top{top:17% !important;right:0 !important}
+  .card-bottom{bottom:15% !important;left:0 !important}
+}
