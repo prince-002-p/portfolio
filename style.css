@@ -194,3 +194,13 @@ body{background:#070a11}
 .intro-strip{
   background:transparent !important;
 }
+
+
+/* Final reset: CURRENTLY section uses exactly the normal page surface */
+.intro-strip{
+  background:none !important;
+  background-color:transparent !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
