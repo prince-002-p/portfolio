@@ -108,34 +108,31 @@ body{background:#070a11}
   transform:none !important;
 }
 
-/* Developer — top right */
+/* Four fixed cards around the photo */
 .card-top{
   top:42px !important;
-  right:-20px !important;
+  right:0 !important;
   left:auto !important;
   bottom:auto !important;
 }
 
-/* Projects — bottom left */
-.card-bottom{
-  bottom:55px !important;
-  left:-20px !important;
-  right:auto !important;
-  top:auto !important;
-}
-
-/* Python — top left */
 .card-left{
   top:42px !important;
-  left:-20px !important;
+  left:0 !important;
   right:auto !important;
   bottom:auto !important;
 }
 
-/* Game Development — bottom right */
+.card-bottom{
+  bottom:55px !important;
+  left:0 !important;
+  right:auto !important;
+  top:auto !important;
+}
+
 .card-right{
   bottom:55px !important;
-  right:-20px !important;
+  right:0 !important;
   left:auto !important;
   top:auto !important;
 }
@@ -159,10 +156,10 @@ body{background:#070a11}
 
 @media(max-width:850px){
   .hero-visual{height:440px}
-  .card-top{right:1% !important}
-  .card-left{left:1% !important}
-  .card-bottom{left:1% !important}
-  .card-right{right:1% !important}
+  .card-top{right:0 !important}
+  .card-left{left:0 !important}
+  .card-bottom{left:0 !important}
+  .card-right{right:0 !important}
 }
 
 @media(max-width:650px){
@@ -172,12 +169,14 @@ body{background:#070a11}
   .orbit-one{width:285px;height:285px}
   .orbit-two{width:340px;height:340px}
   .orbit-three{width:390px;height:390px}
+
   .floating-card{
     display:flex !important;
     padding:8px 9px;
     gap:7px;
     white-space:nowrap;
   }
+
   .floating-card b{font-size:10px}
   .floating-card small{font-size:8px}
   .floating-card>span{font-size:14px}
