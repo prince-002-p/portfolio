@@ -188,3 +188,9 @@ body{background:#070a11}
 .intro-strip{
   background:linear-gradient(135deg,#111827,#172554) !important;
 }
+
+
+/* Restore CURRENTLY section to the default page background */
+.intro-strip{
+  background:transparent !important;
+}
