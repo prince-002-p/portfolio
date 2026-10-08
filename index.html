@@ -7,6 +7,60 @@
 <meta name="theme-color" content="#080b14">
 <title>Prince Kumar | BCA Developer</title>
 <link rel="stylesheet" href="style.css">
+
+<style id="project-lab-final-fix">
+#projects.project-section-fix{overflow:hidden}
+#projects .project-heading{display:block !important;width:100% !important;max-width:100% !important;min-width:0 !important}
+#projects .project-heading>div{width:100% !important;min-width:0 !important}
+#projects .project-heading>p{display:block !important;width:100% !important;max-width:600px !important;margin:14px 0 0 !important;overflow-wrap:anywhere !important;word-break:break-word !important}
+#projects .project-filter{display:flex !important;flex-wrap:wrap !important;gap:7px !important;width:100% !important;max-width:100% !important;margin:25px 0 !important}
+#projects .project-filter button.filter{
+appearance:none !important;
+-webkit-appearance:none !important;
+display:inline-flex !important;
+align-items:center !important;
+justify-content:center !important;
+box-sizing:border-box !important;
+width:auto !important;
+height:auto !important;
+margin:0 !important;
+padding:8px 12px !important;
+border:1px solid var(--line) !important;
+border-radius:7px !important;
+background:#0d121e !important;
+color:#7d899d !important;
+font:10px "DM Mono",monospace !important;
+line-height:1.2 !important;
+cursor:pointer !important;
+}
+#projects .project-filter button.filter.active,
+#projects .project-filter button.filter:hover{
+background:var(--accent) !important;
+color:#07110c !important;
+border-color:var(--accent) !important;
+}
+#projects .project-grid{
+display:grid !important;
+grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+gap:14px !important;
+width:100% !important;
+max-width:100% !important;
+min-width:0 !important;
+}
+#projects .project-card{
+width:100% !important;
+max-width:100% !important;
+min-width:0 !important;
+box-sizing:border-box !important;
+overflow:hidden !important;
+}
+#projects .project-card.featured{grid-column:1 / -1 !important}
+@media(max-width:650px){
+#projects .project-grid{grid-template-columns:minmax(0,1fr) !important}
+#projects .project-card.featured{grid-column:1 !important}
+}
+</style>
+
 </head>
 <body>
 <div class="bg-grid" aria-hidden="true"></div>
@@ -152,7 +206,7 @@
   </div>
 </section>
 
-<section class="section projects-section" id="projects">
+<section class="section projects-section project-section-fix" id="projects">
   <div class="section-label">03 · PROJECT LAB</div>
   <div class="section-heading project-heading"><div><h2>Things I've <span>actually built.</span></h2></div><p>Filter the lab by what kind of problem I was trying to solve.</p></div>
   <div class="project-filter" role="tablist">
