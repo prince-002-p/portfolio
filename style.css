@@ -130,21 +130,21 @@ body{background:#070a11}
 
 .card-left{
   top:50% !important;
-  left:-12px !important;
+  left:-175px !important;
   right:auto !important;
   bottom:auto !important;
 }
 
 .card-right{
   top:50% !important;
-  right:-12px !important;
+  right:-175px !important;
   left:auto !important;
   bottom:auto !important;
 }
 
 @media(max-width:850px){
-  .card-left{left:-4px !important}
-  .card-right{right:-4px !important}
+  .card-left{left:-145px !important}
+  .card-right{right:-145px !important}
 }
 
 .profile-wrap::after{
