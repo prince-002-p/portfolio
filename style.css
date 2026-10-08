@@ -206,322 +206,35 @@ body{background:#070a11}
 }
 
 
-/* Final PROJECT LAB overflow/layout fix */
-.projects-section,
-.project-heading,
-.project-heading > div,
-.project-heading > p,
-.project-grid,
-.project-card{
-  min-width:0;
-  max-width:100%;
-}
+/* ===== PROJECT LAB — CLEAN FINAL FIX ===== */
 
-.project-heading{
-  width:100%;
-}
-
-.project-heading > div{
-  flex:1 1 auto;
-}
-
-.project-heading > p{
-  flex:0 1 430px;
-  width:100%;
-  overflow-wrap:anywhere;
-}
-
-.project-grid{
-  width:100%;
-}
-
-.project-card{
-  overflow:hidden;
-}
-
-.project-filter{
-  display:flex !important;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:7px;
-}
-
-.project-filter .filter{
-  appearance:none;
-  -webkit-appearance:none;
-  border:1px solid var(--line);
-  background:#0d121e;
-  color:#7d899d;
-  padding:8px 12px;
-  border-radius:7px;
-  font:10px "DM Mono",monospace;
-  cursor:pointer;
-}
-
-.project-filter .filter.active,
-.project-filter .filter:hover{
-  color:#07110c;
-  background:var(--accent);
-  border-color:var(--accent);
-}
-
-@media(max-width:850px){
-  .project-heading > p{
-    max-width:100%;
-    flex:none;
-  }
-}
-
-
-/* Hard containment for PROJECT LAB */
-.projects-section{
-  width:100% !important;
-  max-width:var(--max) !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
-  overflow:hidden !important;
-}
-
-.projects-section .project-heading{
-  width:100% !important;
-  display:flex !important;
-  justify-content:space-between !important;
-  align-items:flex-end !important;
-  gap:40px !important;
-}
-
-.projects-section .project-heading > div{
-  min-width:0 !important;
-  flex:1 1 auto !important;
-}
-
-.projects-section .project-heading > p{
-  min-width:0 !important;
-  width:min(430px,100%) !important;
-  flex:0 1 430px !important;
-  overflow-wrap:anywhere !important;
-}
-
-.projects-section .project-grid{
-  width:100% !important;
-  max-width:100% !important;
-  min-width:0 !important;
-  display:grid !important;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
-}
-
-.projects-section .project-card{
-  width:100% !important;
-  min-width:0 !important;
-  max-width:100% !important;
-  overflow:hidden !important;
-}
-
-.projects-section .project-card.featured{
-  grid-column:1 / -1 !important;
-}
-
-.projects-section .project-filter{
-  width:100% !important;
-  max-width:100% !important;
-  min-width:0 !important;
-}
-
-.projects-section .project-filter .filter{
-  flex:0 0 auto !important;
-  white-space:nowrap !important;
-}
-
-@media(max-width:850px){
-  .projects-section .project-heading{
-    display:block !important;
-  }
-  .projects-section .project-heading > p{
-    width:100% !important;
-    max-width:100% !important;
-    margin-top:15px !important;
-  }
-}
-
-@media(max-width:650px){
-  .projects-section .project-grid{
-    grid-template-columns:minmax(0,1fr) !important;
-  }
-  .projects-section .project-card.featured{
-    grid-column:1 !important;
-  }
-}
-
-
-/* ===== PROJECT LAB — FINAL CONTAINMENT FIX ===== */
-.projects-section{
-  width:100%;
-  max-width:var(--max);
-  min-width:0;
-  margin-left:auto;
-  margin-right:auto;
-  overflow:visible;
-}
-
-.projects-section .section-heading,
-.projects-section .project-heading{
-  width:100%;
-  min-width:0;
-  max-width:100%;
-}
-
-.projects-section .section-heading > div,
-.projects-section .project-heading > div{
-  min-width:0;
-  flex:1 1 auto;
-}
-
-.projects-section .section-heading > p,
-.projects-section .project-heading > p{
-  min-width:0;
-  max-width:430px;
-  width:100%;
-  flex:0 1 430px;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-.projects-section .project-filter{
-  width:100%;
-  max-width:100%;
-  min-width:0;
-  display:flex !important;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:7px;
-}
-
-.projects-section .project-filter button.filter,
-.projects-section .project-filter .filter{
-  appearance:none !important;
-  -webkit-appearance:none !important;
-  display:inline-flex !important;
-  align-items:center;
-  justify-content:center;
-  flex:0 0 auto;
-  white-space:nowrap;
-  border:1px solid var(--line) !important;
-  outline:0;
-  background:#0d121e !important;
-  color:#7d899d !important;
-  padding:8px 12px !important;
-  border-radius:7px !important;
-  font:10px "DM Mono",monospace !important;
-  line-height:1.2;
-  cursor:pointer;
-}
-
-.projects-section .project-filter button.filter.active,
-.projects-section .project-filter button.filter:hover,
-.projects-section .project-filter .filter.active,
-.projects-section .project-filter .filter:hover{
-  color:#07110c !important;
-  background:var(--accent) !important;
-  border-color:var(--accent) !important;
-}
-
-.projects-section .project-grid{
-  width:100%;
-  max-width:100%;
-  min-width:0;
-  display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-  gap:14px;
-}
-
-.projects-section .project-card{
-  width:100%;
-  max-width:100%;
-  min-width:0;
-  overflow:hidden;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-.projects-section .project-card.featured{
-  grid-column:1 / -1;
-}
-
-.projects-section .project-body,
-.projects-section .project-top,
-.projects-section .tags,
-.projects-section .project-links{
-  min-width:0;
-  max-width:100%;
-}
-
-.projects-section .project-body > p,
-.projects-section .project-body h3,
-.projects-section .project-note{
-  min-width:0;
-  max-width:100%;
-  overflow-wrap:anywhere;
-  word-break:break-word;
-}
-
-@media(max-width:850px){
-  .projects-section .section-heading,
-  .projects-section .project-heading{
-    display:block;
-  }
-  .projects-section .section-heading > p,
-  .projects-section .project-heading > p{
-    width:100%;
-    max-width:100%;
-    margin-top:15px;
-  }
-}
-
-@media(max-width:650px){
-  .projects-section .project-grid{
-    grid-template-columns:minmax(0,1fr);
-  }
-  .projects-section .project-card.featured{
-    grid-column:1;
-  }
-}
-
-
-/* ===== PROJECT LAB — DEFINITIVE WIDTH FIX ===== */
 #projects.projects-section{
-  box-sizing:border-box !important;
   width:100% !important;
   max-width:var(--max) !important;
   min-width:0 !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
+  margin:0 auto !important;
+  padding-left:24px !important;
+  padding-right:24px !important;
   overflow:hidden !important;
 }
 
-#projects.projects-section .section-heading,
 #projects.projects-section .project-heading{
-  box-sizing:border-box !important;
   width:100% !important;
-  max-width:100% !important;
   min-width:0 !important;
   display:flex !important;
-  align-items:flex-end !important;
   justify-content:space-between !important;
+  align-items:flex-end !important;
   gap:40px !important;
 }
 
-#projects.projects-section .section-heading > div,
 #projects.projects-section .project-heading > div{
   min-width:0 !important;
-  max-width:100% !important;
   flex:1 1 auto !important;
 }
 
-#projects.projects-section .section-heading > p,
 #projects.projects-section .project-heading > p{
-  box-sizing:border-box !important;
   min-width:0 !important;
-  width:min(430px,100%) !important;
+  width:430px !important;
   max-width:430px !important;
   flex:0 1 430px !important;
   overflow-wrap:anywhere !important;
@@ -529,24 +242,23 @@ body{background:#070a11}
 }
 
 #projects.projects-section .project-filter{
-  box-sizing:border-box !important;
   width:100% !important;
-  max-width:100% !important;
   min-width:0 !important;
   display:flex !important;
   flex-wrap:wrap !important;
-  align-items:center !important;
   gap:7px !important;
+  margin:-10px 0 25px !important;
 }
 
-#projects.projects-section .project-filter button.filter{
-  box-sizing:border-box !important;
+#projects.projects-section .project-filter .filter{
   appearance:none !important;
   -webkit-appearance:none !important;
   display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
   width:auto !important;
-  max-width:100% !important;
   min-width:0 !important;
+  max-width:100% !important;
   flex:0 0 auto !important;
   white-space:nowrap !important;
   border:1px solid var(--line) !important;
@@ -556,30 +268,29 @@ body{background:#070a11}
   border-radius:7px !important;
   font:10px "DM Mono",monospace !important;
   line-height:1.2 !important;
+  cursor:pointer !important;
 }
 
-#projects.projects-section .project-filter button.filter.active,
-#projects.projects-section .project-filter button.filter:hover{
-  color:#07110c !important;
+#projects.projects-section .project-filter .filter.active,
+#projects.projects-section .project-filter .filter:hover{
   background:var(--accent) !important;
+  color:#07110c !important;
   border-color:var(--accent) !important;
 }
 
 #projects.projects-section .project-grid{
-  box-sizing:border-box !important;
   width:100% !important;
-  max-width:100% !important;
   min-width:0 !important;
+  max-width:100% !important;
   display:grid !important;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
   gap:14px !important;
 }
 
 #projects.projects-section .project-card{
-  box-sizing:border-box !important;
   width:100% !important;
-  max-width:100% !important;
   min-width:0 !important;
+  max-width:100% !important;
   overflow:hidden !important;
   overflow-wrap:anywhere !important;
   word-break:break-word !important;
@@ -589,21 +300,26 @@ body{background:#070a11}
   grid-column:1 / -1 !important;
 }
 
-#projects.projects-section .project-body,
 #projects.projects-section .project-top,
-#projects.projects-section .tags,
-#projects.projects-section .project-links{
+#projects.projects-section .project-body,
+#projects.projects-section .project-links,
+#projects.projects-section .tags{
   min-width:0 !important;
   max-width:100% !important;
 }
 
+#projects.projects-section .project-body > p,
+#projects.projects-section .project-body h3{
+  max-width:100% !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+}
+
 @media(max-width:850px){
-  #projects.projects-section .section-heading,
   #projects.projects-section .project-heading{
     display:block !important;
   }
 
-  #projects.projects-section .section-heading > p,
   #projects.projects-section .project-heading > p{
     width:100% !important;
     max-width:100% !important;
@@ -612,6 +328,11 @@ body{background:#070a11}
 }
 
 @media(max-width:650px){
+  #projects.projects-section{
+    padding-left:20px !important;
+    padding-right:20px !important;
+  }
+
   #projects.projects-section .project-grid{
     grid-template-columns:minmax(0,1fr) !important;
   }
