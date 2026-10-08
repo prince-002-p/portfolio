@@ -271,3 +271,83 @@ body{background:#070a11}
     flex:none;
   }
 }
+
+
+/* Hard containment for PROJECT LAB */
+.projects-section{
+  width:100% !important;
+  max-width:var(--max) !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  overflow:hidden !important;
+}
+
+.projects-section .project-heading{
+  width:100% !important;
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-end !important;
+  gap:40px !important;
+}
+
+.projects-section .project-heading > div{
+  min-width:0 !important;
+  flex:1 1 auto !important;
+}
+
+.projects-section .project-heading > p{
+  min-width:0 !important;
+  width:min(430px,100%) !important;
+  flex:0 1 430px !important;
+  overflow-wrap:anywhere !important;
+}
+
+.projects-section .project-grid{
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+}
+
+.projects-section .project-card{
+  width:100% !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  overflow:hidden !important;
+}
+
+.projects-section .project-card.featured{
+  grid-column:1 / -1 !important;
+}
+
+.projects-section .project-filter{
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+}
+
+.projects-section .project-filter .filter{
+  flex:0 0 auto !important;
+  white-space:nowrap !important;
+}
+
+@media(max-width:850px){
+  .projects-section .project-heading{
+    display:block !important;
+  }
+  .projects-section .project-heading > p{
+    width:100% !important;
+    max-width:100% !important;
+    margin-top:15px !important;
+  }
+}
+
+@media(max-width:650px){
+  .projects-section .project-grid{
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+  .projects-section .project-card.featured{
+    grid-column:1 !important;
+  }
+}
